@@ -1971,7 +1971,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			background: #fff;
+			background: #000000;
 			border-color: #df7366;
 		}
 
@@ -2025,7 +2025,7 @@ input, select, textarea {
 				}
 
 				table.default tbody tr:nth-child(2n+1) {
-					background: #fafafa;
+					background: #000000;
 				}
 
 			table.default td {
