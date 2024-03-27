@@ -2077,7 +2077,7 @@ input, select, textarea {
 		button:hover,
 		.button:hover {
 			color: #fff;
-			background: #ef8376;
+			background: #20004f;
 		}
 
 		input[type="button"].alt,
@@ -2163,7 +2163,7 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		background: #fff;
+		background: #000000;
 		margin: 0 0 2em 0;
 		padding: 6em 0 6em 0;
 	}
