@@ -1807,6 +1807,11 @@ input, select, textarea {
 			height: 190px;
 			overflow: hidden;
 		}
+		.image.big {
+			display: block;
+			width: 100%;
+			margin: 0 0 4em 0;
+		}
 
 		.image.left {
 			float: left;
