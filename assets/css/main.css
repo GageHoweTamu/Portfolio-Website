@@ -2137,7 +2137,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Monaspace Neon Var';
+			font-family: 'GageFont';
 			font-weight: 400;
 		}
 
@@ -2155,7 +2155,7 @@ input, select, textarea {
 		}
 
 		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+			font-family: 'GageFont';
 		}
 
 		.icon.circled {
@@ -2921,7 +2921,7 @@ input, select, textarea {
 						text-rendering: auto;
 						line-height: 1;
 						text-transform: none !important;
-						font-family: 'Monaspace Neon Var';
+						font-family: 'GageFont';
 						font-weight: 900;
 					}
 
