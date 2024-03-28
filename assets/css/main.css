@@ -93,7 +93,6 @@ input, select, textarea {
 		font-size: 15pt;
 		line-height: 1.85em;
 		font-family: 'RadonMedium';
-		font-weight: 300;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -110,7 +109,7 @@ input, select, textarea {
 	input, textarea, select {
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'RadonMedium';
 		font-weight: 300;
 	}
 
