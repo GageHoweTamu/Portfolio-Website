@@ -1789,6 +1789,11 @@ input, select, textarea {
 			display: block;
 			width: 100%;
 		}
+		.image cropped {
+			display: block;
+			height: 200px;
+			overflow: hidden;
+		}
 
 		.image.fit {
 			display: block;
@@ -1799,6 +1804,8 @@ input, select, textarea {
 			display: block;
 			width: 100%;
 			margin: 0 0 4em 0;
+			height: 200px;
+			overflow: hidden;
 		}
 
 		.image.left {
