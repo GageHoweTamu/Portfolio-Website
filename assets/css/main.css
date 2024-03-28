@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'RadonMedium';
-  src: url('../../assets/webfonts/MonaspaceArgon-Medium.woff') format('woff');
+  src: url('../../assets/webfonts/MonaspaceRadon-Medium.woff') format('woff'),
+  url('../../assets/webfonts/imp_ttf/MonaspaceRadonVarVF[wght,wdth,slnt].ttf') format('truetype');
 }
 @font-face {
   font-family: 'ArgonMedium';
