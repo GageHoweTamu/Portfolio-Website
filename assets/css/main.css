@@ -2,7 +2,6 @@
 @font-face {
   font-family: 'GageFont';
   src: 	url('../../assets/webfonts/MonaspaceXenon-Medium.woff') format('woff'),
-  		url('../../assets/webfonts/MonaspaceXenonVarVF[wght,wdth,slnt].woff2') format('woff2'),
        	url('../../assets/webfonts/imp_ttf/MonaspaceXenonVarVF[wght,wdth,slnt].ttf') format('truetype');
 }
 
