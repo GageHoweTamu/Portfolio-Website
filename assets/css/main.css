@@ -1783,7 +1783,6 @@ input, select, textarea {
 		display: inline-block;
 		border: 0;
 		outline: 0;
-		width: 520px;
 	}
 
 		.image img {
@@ -1793,10 +1792,12 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
+			width: 100%;
 		}
 
 		.image.featured {
 			display: block;
+			width: 100%;
 			margin: 0 0 4em 0;
 		}
 
