@@ -87,7 +87,7 @@ input, select, textarea {
 		color: #d8e2ff;
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'Monaspace Neon Var';
+		font-family: 'Monaspace Radon Var';
 		font-weight: 300;
 	}
 
@@ -2134,7 +2134,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Monaspace Neon Var';
 			font-weight: 400;
 		}
 
@@ -2918,7 +2918,7 @@ input, select, textarea {
 						text-rendering: auto;
 						line-height: 1;
 						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
+						font-family: 'Monaspace Neon Var';
 						font-weight: 900;
 					}
 
