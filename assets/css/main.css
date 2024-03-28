@@ -94,7 +94,7 @@ input, select, textarea {
 		color: #d8e2ff;
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'RadonMedium';
+		font-family: 'ArgonMedium';
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -111,7 +111,7 @@ input, select, textarea {
 	input, textarea, select {
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'RadonMedium';
+		font-family: 'ArgonMedium';
 		font-weight: 300;
 	}
 
