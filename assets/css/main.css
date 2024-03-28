@@ -1,12 +1,8 @@
+
 @font-face {
-  font-family: 'RadonMedium';
+  font-family: 'GageFont';
   src: url('../../assets/webfonts/MonaspaceRadon-Medium.woff') format('woff'),
-  url('../../assets/webfonts/imp_ttf/MonaspaceRadonVarVF[wght,wdth,slnt].ttf') format('truetype');
-}
-@font-face {
-  font-family: 'ArgonMedium';
-  src: url('../../assets/webfonts/MonaspaceArgon-Medium.woff') format('woff'),
-       url('../../assets/webfonts/imp_ttf/MonaspaceArgonVarVF[wght,wdth,slnt].ttf') format('truetype');
+       url('../../assets/webfonts/imp_ttf/MonaspaceRadonVarVF[wght,wdth,slnt].ttf') format('truetype');
 }
 
 /*
@@ -95,7 +91,7 @@ input, select, textarea {
 		color: #d8e2ff;
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'ArgonMedium';
+		font-family: 'GageFont';
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -112,7 +108,7 @@ input, select, textarea {
 	input, textarea, select {
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'ArgonMedium';
+		font-family: 'GageFont';
 		font-weight: 300;
 	}
 
