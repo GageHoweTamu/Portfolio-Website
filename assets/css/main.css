@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'RadonMedium';
-  src: url('..assets/webfonts/MonaspaceArgon-Medium.woff') format('woff');
+  src: url('../../assets/webfonts/MonaspaceArgon-Medium.woff') format('woff');
 }
 @font-face {
   font-family: 'ArgonMedium';
-  src: url('../assets/webfonts/MonaspaceArgon-Medium.woff') format('woff'),
-       url('../assets/webfonts/imp_ttf/MonaspaceArgonVarVF[wght,wdth,slnt].ttf') format('truetype');
+  src: url('../../assets/webfonts/MonaspaceArgon-Medium.woff') format('woff'),
+       url('../../assets/webfonts/imp_ttf/MonaspaceArgonVarVF[wght,wdth,slnt].ttf') format('truetype');
 }
 
 /*
