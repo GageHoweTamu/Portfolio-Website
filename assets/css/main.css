@@ -4,6 +4,11 @@
         url("../../assets/webfonts/MonaspaceNeon-Light.woff") format("woff"),
         url("../../assets/webfonts/imp_ttf/MonaspaceXenonVarVF[wght,wdth,slnt].ttf")
             format("truetype");
+    font-family: "HeaderFont";
+    src:
+        url("../../assets/webfonts/MonaspaceArgon-Light.woff") format("woff"),
+        url("../../assets/webfonts/imp_ttf/MonaspaceXenonVarVF[wght,wdth,slnt].ttf")
+            format("truetype");
 }
 
 html,
@@ -310,7 +315,7 @@ table {
 }
 
 p {
-    text-align: justify;
+    text-align: left;
 }
 
 br.clear {
@@ -1876,6 +1881,7 @@ article.special > footer {
 
 header {
     margin: 0 0 1em 0;
+    font-family: HeaderFont;
 }
 
 header > p {
