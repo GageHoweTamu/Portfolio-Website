@@ -1,14 +1,11 @@
 @font-face {
     font-family: "GageFont";
     src:
-        url("../../assets/webfonts/MonaspaceNeon-Light.woff") format("woff"),
-        url("../../assets/webfonts/imp_ttf/MonaspaceXenonVarVF[wght,wdth,slnt].ttf")
-            format("truetype");
+        url("../../assets/webfonts/MonaspaceNeon-Light.woff") format("woff");
+        
     font-family: "HeaderFont";
     src:
-        url("../../assets/webfonts/MonaspaceArgon-Light.woff") format("woff"),
-        url("../../assets/webfonts/imp_ttf/MonaspaceXenonVarVF[wght,wdth,slnt].ttf")
-            format("truetype");
+        url("../../assets/webfonts/MonaspaceArgon-Light.woff") format("woff");
 }
 
 html,
