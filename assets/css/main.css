@@ -2159,7 +2159,7 @@ table.default tbody tr:first-child {
 }
 
 table.default tbody tr:nth-child(2n + 1) {
-    background: #000000;
+    background: #232323;
 }
 
 table.default td {
