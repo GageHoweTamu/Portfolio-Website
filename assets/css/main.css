@@ -213,7 +213,7 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    color: #ffffff;
+    color: #d8e2ff;
     line-height: 1.25em;
 }
 
@@ -2315,7 +2315,7 @@ header .icon.circled {
 /* Wrapper */
 
 .wrapper {
-    background: #0d181f;
+    background: #0d151f;
     margin: 0 0 2em 0;
     padding: 6em 0 6em 0;
 }
@@ -2363,7 +2363,7 @@ header .icon.circled {
 }
 
 #header h1 {
-    color: #fff;
+    color: #d8e2ff;
     font-size: 3em;
     line-height: 1em;
 }
