@@ -206,6 +206,7 @@ select {
 h1,
 h2 {
     font-family: "HeaderFont";
+    line-height: 1.5em;
 }
 h3,
 h4,
