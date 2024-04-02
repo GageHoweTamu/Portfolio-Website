@@ -174,11 +174,11 @@ html {
 }
 
 body {
-    background: #99c9ff;
+    background: #000000;
     color: #d8e2ff;
     font-size: 13pt;
     line-height: 1.85em;
-    font-family: "GageFont";
+    font-family: "HeaderFont";
 }
 
 body.is-preload *,
