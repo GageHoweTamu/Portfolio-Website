@@ -174,8 +174,8 @@ html {
 }
 
 body {
-    background: #000000;
-    color: #d8e2ff;
+    background: #000000; /* Header Background */
+    color: #d8e2ff; /* Gage Howe */
     font-size: 13pt;
     line-height: 1.85em;
     font-family: "HeaderFont";
