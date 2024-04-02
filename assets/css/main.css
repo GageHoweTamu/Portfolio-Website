@@ -2624,7 +2624,7 @@ body.homepage.is-preload #header:after {
     position: relative;
     overflow: hidden;
     padding: 6em 0 6em 0;
-    background: #2b252c;
+    background: #000000;
     color: #fff;
 }
 
