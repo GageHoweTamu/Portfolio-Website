@@ -2696,7 +2696,7 @@ body.homepage.is-preload #header:after {
     width: 6em;
     height: 6em;
     border-radius: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.5);
     position: absolute;
     top: 50%;
     margin-top: -3em;
