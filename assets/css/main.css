@@ -3196,7 +3196,7 @@ body.homepage.is-preload #header:after {
     }
 
     #navPanel .depth-0 {
-        color: #000000;
+        color: #ff0000;
     }
 
     body.navPanel-visible #page-wrapper {
