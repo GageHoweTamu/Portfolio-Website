@@ -3,8 +3,8 @@
 @font-face {
     font-family: "GageFont";
     src:
-        url("../../assets/webfonts/MonaspaceNeon-Light.woff") format("woff");
-        
+        url("../../assets/webfonts/FiraCode-Medium.woff2") format("woff");
+        /* ../../assets/webfonts/MonaspaceNeon-Light.woff */
     font-family: "HeaderFont";
     src:
         url("../../assets/webfonts/MonaspaceArgon-Light.woff") format("woff");
