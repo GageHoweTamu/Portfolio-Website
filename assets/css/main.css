@@ -3,7 +3,7 @@
 @font-face {
     font-family: "GageFont";
     src:
-        url("../../assets/webfonts/FiraCode-Medium.woff2") format("woff");
+        url("../../assets/webfonts/FiraCode-Medium.woff") format("woff");
         /* ../../assets/webfonts/MonaspaceNeon-Light.woff */
     font-family: "HeaderFont";
     src:
