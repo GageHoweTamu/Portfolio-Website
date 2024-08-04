@@ -3,91 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery with Lazy Loading</title>
+    <title>Gage Howe - Software Developer</title>
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link rel="icon" href="images/uwu.png" type="image/x-icon" />
     <style>
+        :root {
+            --bg-color: #0d151f;
+            --text-color: #d8e2ff;
+            --accent-color: #4CAF50;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             transition: background-color 0.3s, color 0.3s;
         }
-        .dark-mode {
-            background-color: #222;
-            color: #fff;
-        }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        .image-container {
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .project {
             margin-bottom: 40px;
         }
-        .image-container img {
+        .project img {
             width: 100%;
-            height: 60vh;
+            height: 300px;
             object-fit: cover;
-            display: block;
-        }
-        h2 {
-            margin-bottom: 10px;
-        }
-        p {
-            margin-top: 10px;
         }
         #mode-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: var(--accent-color);
             color: white;
             border: none;
             cursor: pointer;
         }
+        .light-mode {
+            --bg-color: #f0f0f0;
+            --text-color: #333;
+        }
     </style>
 </head>
 <body>
-    <button id="mode-switch" hx-get="javascript:toggleDarkMode()" hx-swap="none">Toggle Dark Mode</button>
-
     <div class="container">
-        <div class="image-container">
-            <h2>Beautiful Landscape</h2>
-            <img src="placeholder.jpg" alt="Beautiful Landscape" 
-                 hx-get="javascript:loadImage('https://picsum.photos/800/600?random=1')"
-                 hx-trigger="revealed"
-                 hx-swap="outerHTML">
-            <p>A stunning view of nature's beauty, showcasing mountains and forests.</p>
-        </div>
+        <header>
+            <h1>Gage Howe</h1>
+            <nav>
+                <a href="https://github.com/GageHoweTamu">GitHub</a>
+                <a href="https://www.linkedin.com/in/gage-howe/">LinkedIn</a>
+                <button id="mode-switch" hx-get="javascript:toggleDarkMode()" hx-swap="none">Toggle Dark Mode</button>
+            </nav>
+        </header>
 
-        <div class="image-container">
-            <h2>City Skyline</h2>
-            <img src="placeholder.jpg" alt="City Skyline" 
-                 hx-get="javascript:loadImage('https://picsum.photos/800/600?random=2')"
-                 hx-trigger="revealed"
-                 hx-swap="outerHTML">
-            <p>An impressive cityscape showing modern architecture and urban life.</p>
-        </div>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I'm Gage, a software developer and computer science student at Texas A&M University. I'm strongest in Rust, Python, and C++, but I'm always looking to learn more. I'm currently learning about web development and machine learning, and have some experience in game development and software engineering.</p>
+            </section>
 
-        <div class="image-container">
-            <h2>Ocean Sunset</h2>
-            <img src="placeholder.jpg" alt="Ocean Sunset" 
-                 hx-get="javascript:loadImage('https://picsum.photos/800/600?random=3')"
-                 hx-trigger="revealed"
-                 hx-swap="outerHTML">
-            <p>A breathtaking sunset over the ocean, painting the sky in vibrant colors.</p>
-        </div>
+            <section id="projects">
+                <h2>Projects</h2>
+                <div id="project-list" hx-trigger="revealed" hx-get="javascript:loadProjects()" hx-swap="innerHTML">
+                    <!-- Projects will be loaded here -->
+                </div>
+            </section>
+        </main>
     </div>
 
     <script>
-        function loadImage(url) {
-            return `<img src="${url}" alt="Loaded Image">`;
+        function toggleDarkMode() {
+            document.body.classList.toggle('light-mode');
+            return '';
         }
 
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            return '';
+        function loadProjects() {
+            const projects = [
+                {
+                    title: "Constellation.md",
+                    image: "images/Constellationmd.gif",
+                    description: "A force-directed graph that visualizes references between MD files. [Python]",
+                    link: "https://github.com/GageHoweTamu/Constellation.md"
+                },
+                {
+                    title: "RetailDB",
+                    image: "images/retaildb.gif",
+                    description: "A CRUD and REST database application implemented with PostgreSQL, Python with Flask, React.js, and an AWS server. [Python] [JavaScript] [SQL]",
+                    link: "oops.html"
+                },
+                {
+                    title: "Life3D",
+                    image: "images/life3d.gif",
+                    description: "A cellular life and evolution simulator, inspired by cellular automata and The Life Engine. [Rust]",
+                    link: "https://github.com/GageHoweTamu/Life3D"
+                }
+                // Add more projects here
+            ];
+
+            let html = '';
+            projects.forEach(project => {
+                html += `
+                    <div class="project">
+                        <h3><a href="${project.link}">${project.title}</a></h3>
+                        <img src="placeholder.jpg" alt="${project.title}" 
+                             hx-get="javascript:loadImage('${project.image}')"
+                             hx-trigger="revealed"
+                             hx-swap="outerHTML">
+                        <p>${project.description}</p>
+                    </div>
+                `;
+            });
+
+            return html;
+        }
+
+        function loadImage(url) {
+            return `<img src="${url}" alt="Loaded Image">`;
         }
     </script>
 </body>
