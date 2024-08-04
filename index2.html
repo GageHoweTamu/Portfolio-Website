@@ -1,6 +1,94 @@
-<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Lazy Loading</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .image-container {
+            margin-bottom: 40px;
+        }
+        .image-container img {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            display: block;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-top: 10px;
+        }
+        #mode-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="mode-switch" hx-get="javascript:toggleDarkMode()" hx-swap="none">Toggle Dark Mode</button>
 
-<button hx-post="/submit" hx-target="#response">
-    Click me
-  </button>
-  <div id="response"></div>
+    <div class="container">
+        <div class="image-container">
+            <h2>Beautiful Landscape</h2>
+            <img src="placeholder.jpg" alt="Beautiful Landscape" 
+                 hx-get="javascript:loadImage('https://picsum.photos/800/600?random=1')"
+                 hx-trigger="revealed"
+                 hx-swap="outerHTML">
+            <p>A stunning view of nature's beauty, showcasing mountains and forests.</p>
+        </div>
+
+        <div class="image-container">
+            <h2>City Skyline</h2>
+            <img src="placeholder.jpg" alt="City Skyline" 
+                 hx-get="javascript:loadImage('https://picsum.photos/800/600?random=2')"
+                 hx-trigger="revealed"
+                 hx-swap="outerHTML">
+            <p>An impressive cityscape showing modern architecture and urban life.</p>
+        </div>
+
+        <div class="image-container">
+            <h2>Ocean Sunset</h2>
+            <img src="placeholder.jpg" alt="Ocean Sunset" 
+                 hx-get="javascript:loadImage('https://picsum.photos/800/600?random=3')"
+                 hx-trigger="revealed"
+                 hx-swap="outerHTML">
+            <p>A breathtaking sunset over the ocean, painting the sky in vibrant colors.</p>
+        </div>
+    </div>
+
+    <script>
+        function loadImage(url) {
+            return `<img src="${url}" alt="Loaded Image">`;
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            return '';
+        }
+    </script>
+</body>
+</html>
