@@ -64,7 +64,7 @@
             <nav>
                 <a href="https://github.com/GageHoweTamu">GitHub</a>
                 <a href="https://www.linkedin.com/in/gage-howe/">LinkedIn</a>
-                <button id="mode-switch" hx-post="/toggle-mode" hx-swap="none">Toggle Dark Mode</button>
+                <button id="mode-switch" hx-get="javascript:toggleDarkMode()" hx-swap="none">Toggle Dark Mode</button>
             </nav>
         </header>
 
@@ -76,7 +76,7 @@
 
             <section id="projects">
                 <h2>Projects</h2>
-                <div id="project-list" hx-get="/load-projects" hx-trigger="revealed">
+                <div id="project-list" hx-get="javascript:loadProjects()" hx-trigger="revealed">
                     <!-- Projects will be loaded here -->
                 </div>
             </section>
@@ -84,57 +84,48 @@
     </div>
 
     <script>
-        htmx.on("htmx:afterSwap", function(evt) {
-            if (evt.detail.target.id === "project-list") {
-                document.querySelectorAll('#project-list img').forEach(img => {
-                    img.setAttribute('hx-get', `/load-image?url=${encodeURIComponent(img.dataset.src)}`);
-                    img.setAttribute('hx-trigger', 'revealed');
-                });
-            }
-        });
+        function toggleDarkMode() {
+            document.body.classList.toggle('light-mode');
+            return '';
+        }
 
-        // Simulating server endpoints for demonstration
-        htmx.onLoad(function() {
-            htmx.defineEndpoint("/toggle-mode", function() {
-                document.body.classList.toggle('light-mode');
-                return "";
-            });
+        function loadProjects() {
+            const projects = [
+                {
+                    title: "Constellation.md",
+                    image: "images/Constellationmd.gif",
+                    description: "A force-directed graph that visualizes references between MD files. [Python]",
+                    link: "https://github.com/GageHoweTamu/Constellation.md"
+                },
+                {
+                    title: "RetailDB",
+                    image: "images/retaildb.gif",
+                    description: "A CRUD and REST database application implemented with PostgreSQL, Python with Flask, React.js, and an AWS server. [Python] [JavaScript] [SQL]",
+                    link: "oops.html"
+                },
+                {
+                    title: "Life3D",
+                    image: "images/life3d.gif",
+                    description: "A cellular life and evolution simulator, inspired by cellular automata and The Life Engine. [Rust]",
+                    link: "https://github.com/GageHoweTamu/Life3D"
+                }
+            ];
 
-            htmx.defineEndpoint("/load-projects", function() {
-                const projects = [
-                    {
-                        title: "Constellation.md",
-                        image: "images/Constellationmd.gif",
-                        description: "A force-directed graph that visualizes references between MD files. [Python]",
-                        link: "https://github.com/GageHoweTamu/Constellation.md"
-                    },
-                    {
-                        title: "RetailDB",
-                        image: "images/retaildb.gif",
-                        description: "A CRUD and REST database application implemented with PostgreSQL, Python with Flask, React.js, and an AWS server. [Python] [JavaScript] [SQL]",
-                        link: "oops.html"
-                    },
-                    {
-                        title: "Life3D",
-                        image: "images/life3d.gif",
-                        description: "A cellular life and evolution simulator, inspired by cellular automata and The Life Engine. [Rust]",
-                        link: "https://github.com/GageHoweTamu/Life3D"
-                    }
-                ];
+            return projects.map(project => `
+                <div class="project">
+                    <h3><a href="${project.link}">${project.title}</a></h3>
+                    <img src="placeholder.jpg" alt="${project.title}" 
+                         hx-get="javascript:loadImage('${project.image}')"
+                         hx-trigger="revealed"
+                         hx-swap="outerHTML">
+                    <p>${project.description}</p>
+                </div>
+            `).join('');
+        }
 
-                return projects.map(project => `
-                    <div class="project">
-                        <h3><a href="${project.link}">${project.title}</a></h3>
-                        <img src="placeholder.jpg" data-src="${project.image}" alt="${project.title}">
-                        <p>${project.description}</p>
-                    </div>
-                `).join('');
-            });
-
-            htmx.defineEndpoint("/load-image", function(url) {
-                return `<img src="${url}" alt="Loaded Image">`;
-            });
-        });
+        function loadImage(url) {
+            return `<img src="${url}" alt="Loaded Image">`;
+        }
     </script>
 </body>
 </html>
