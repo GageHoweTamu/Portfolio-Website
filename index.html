@@ -289,12 +289,12 @@
                 </div>
             </body>
             <body>
-                <div>
-                    <p>
-                        Test area
-                    </p>
-                    <button hx-post="/clicked" hx-swap="outerHTML">
-                        Click Me
+                <div hx-target="this" hx-swap="outerHTML">
+                    <div><label>First Name</label>: Joe</div>
+                    <div><label>Last Name</label>: Blow</div>
+                    <div><label>Email</label>: joe@blow.com</div>
+                    <button hx-get="/contact/1/edit" class="btn primary">
+                    Click To Edit
                     </button>
                 </div>
             </body>
