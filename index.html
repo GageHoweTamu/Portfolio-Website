@@ -16,6 +16,7 @@
             keywords="Gage Howe, software developer, Texas A&M University"
         />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <script src="https://unpkg.com/htmx.org@2.0.1"></script>
         <noscript>
             <link rel="stylesheet" href="assets/css/noscript.css" />
         </noscript>
@@ -275,7 +276,7 @@
                             <p>
                                 text
                             </p>
-                        </article>
+                        </article> 
                     </div>
                     -->
                 </div>
@@ -288,5 +289,14 @@
                 </p>
             </div>
         </body>
+        <body>
+            <div>
+                <p>
+                    Test area
+                </p>
+                <button hx-post="/clicked" hx-swap="outerHTML">
+                    Click Me
+                </button>
+            </div>
     </body>
 </html>
