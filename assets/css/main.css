@@ -1,23 +1,42 @@
-/* this is stolen from somewhere */
-
 @font-face {
     font-family: "GageFont";
-    src:
-        url("../../assets/webfonts/MonaspaceNeon-Light.woff") format("woff");
-        
+    src: url("../../assets/webfonts/MonaspaceNeon-Light.woff") format("woff");
+}
+
+@font-face {
     font-family: "HeaderFont";
-    src:
-        url("../../assets/webfonts/FiraCode-Light.woff") format("woff");
+    src: url("../../assets/webfonts/FiraCode-Light.woff") format("woff");
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/cli520.gif");
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
 }
 
 * {
-    background: #06000f;
     color: #d8e2ff;
     font-size: 14pt;
     line-height: 1.85em;
     font-family: "HeaderFont";
 }
 
+/* Rest of your CSS remains unchanged */
 h1 {
     font-size: 2em;
     text-align: center;
@@ -30,7 +49,7 @@ h2 {
     /* border: 3px solid #0040ff; */
 }
 
-.projects { /* this creates a grid of 3 projects per row*/
+.projects { /* this creates a grid of 3 projects per row */
     padding: 1em;
     display: grid;
     gap: 0px 20px;
@@ -46,7 +65,9 @@ h2 {
 @media (min-width: 2300px) {
     .projects { grid-template-columns: repeat(3, 1fr); }
 }
-
+@media (min-width: 3000px) {
+    .projects { grid-template-columns: repeat(4, 1fr); }
+}
 
 .textblock { /* the main text */
     margin: 0 auto;
@@ -57,6 +78,7 @@ h2 {
     font-size: 14pt;
     line-height: 1.85em;
     font-family: "HeaderFont";
+    background-color: rgba(6, 0, 15, 0.8);
 }
 
 .project_body { /* encapsulates the image and description for each project */
@@ -68,6 +90,7 @@ h2 {
     font-size: 14pt;
     line-height: 1.85em;
     font-family: "HeaderFont";
+    background-color: rgba(6, 0, 15, 0.8);
 }
 
 .project_image {
@@ -83,17 +106,26 @@ h2 {
     align-items: center;
 }
 
-.inline-icon { /* for rust icon etc */
+.inline-icon {
     height: 1em;
     width: 1em;
     margin: 0 .05em 0 .1em;
     vertical-align: -0.1em;
 }
 
-.skills-list { /* this needs to be centered better */
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    width: 50%;
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 90%;
     margin: 0 auto;
+    padding: 1em;
+    gap: 20px;
+}
+
+.skills-list > li {
+    list-style-type: none;
+    text-align: center;
+    flex: 0 1 auto;
 }
