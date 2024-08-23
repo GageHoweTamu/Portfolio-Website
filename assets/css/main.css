@@ -18,14 +18,6 @@
     font-family: "HeaderFont";
 }
 
-body { /* this doesnt work yet */
-    background-image: url("../../images/life3d.gif");
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode:lighten;
-}
-
 h1 {
     font-size: 2em;
     text-align: center;
@@ -41,8 +33,16 @@ h2 {
 .projects { /* this creates a grid of 3 projects per row*/
     padding: 1em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 0px 20px;
+}
+
+/* for adaptive number of projects per row */
+@media (min-width: 600px) {
+    .projects { grid-template-columns: repeat(1, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .projects { grid-template-columns: repeat(2, 1fr); }
 }
 
 .textblock { /* the main text */
