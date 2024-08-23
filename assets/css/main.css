@@ -37,13 +37,16 @@ h2 {
 }
 
 /* for adaptive number of projects per row */
-@media (min-width: 600px) {
+@media (min-width: 0px) {
     .projects { grid-template-columns: repeat(1, 1fr); }
 }
-
 @media (min-width: 900px) {
     .projects { grid-template-columns: repeat(2, 1fr); }
 }
+@media (min-width: 2300px) {
+    .projects { grid-template-columns: repeat(3, 1fr); }
+}
+
 
 .textblock { /* the main text */
     margin: 0 auto;
