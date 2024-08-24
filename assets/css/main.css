@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: "HeaderFont";
-    src: url("../../assets/webfonts/FiraCode-Light.woff") format("woff");
+    src: url("../../assets/webfonts/FiraCode-Medium.woff") format("woff");
 }
 
 body {
@@ -40,13 +40,11 @@ body::before {
 h1 {
     font-size: 2em;
     text-align: center;
-    /* border: 3px solid #0040ff; */
 }
 
 h2 {
     font-size: 1em;
     text-align: center;
-    /* border: 3px solid #0040ff; */
 }
 
 .projects { /* this creates a grid of 3 projects per row */
@@ -62,7 +60,7 @@ h2 {
 @media (min-width: 900px) {
     .projects { grid-template-columns: repeat(2, 1fr); }
 }
-@media (min-width: 2000px) {
+@media (min-width: 1800px) {
     .projects { grid-template-columns: repeat(3, 1fr); }
 }
 @media (min-width: 3000px) {
@@ -73,7 +71,7 @@ h2 {
     margin: 0 auto;
     width: 80%;
     padding: 1em;
-    border: 3px solid #000b2d;
+    border: 3px solid #0b002e;
     border-radius: 10px;
     font-size: 14pt;
     line-height: 1.85em;
@@ -85,7 +83,7 @@ h2 {
     margin: 0 auto;
     width: 90%;
     padding: 1em;
-    border: 3px solid #000b2d;
+    border: 3px solid #0b002e;
     border-radius: 10px;
     font-size: 14pt;
     line-height: 1.85em;
@@ -129,4 +127,8 @@ h2 {
     list-style-type: none;
     text-align: center;
     flex: 0 1 auto;
+}
+
+div {
+    transition: width 2s, height 4s;
 }
