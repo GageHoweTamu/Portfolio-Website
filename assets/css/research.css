@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "GageFont";
+    src: url("../../assets/webfonts/MonaspaceNeon-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HeaderFont";
+    src: url("../../assets/webfonts/FiraCode-Medium.woff") format("woff");
+}
+
+* {
+    background-color: #000000;
+    color: #d8e2ff;
+    font-size: 14pt;
+    line-height: 1.85em;
+    font-family: "HeaderFont";
+}
+
+body {
+    position: relative;
+    margin: 1em;
+    padding: 1em;
+    min-height: 100vh;
+}
+
