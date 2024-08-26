@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "GageFont";
+    src: url("../../assets/webfonts/MonaspaceNeon-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HeaderFont";
+    src: url("../../assets/webfonts/FiraCode-Medium.woff") format("woff");
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/Constellationmd.gif");
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+* {
+    color: #d8e2ff;
+    font-size: 14pt;
+    line-height: 1.85em;
+    font-family: "HeaderFont";
+}
+
+/* Rest of your CSS remains unchanged */
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1em;
+    text-align: center;
+}
+
+.projects { /* this creates a grid of 3 projects per row */
+    padding: 1em;
+    display: grid;
+    gap: 0px 20px;
+}
+
+/* for adaptive number of projects per row */
+@media (min-width: 0px) {
+    .projects { grid-template-columns: repeat(1, 1fr); }
+}
+@media (min-width: 900px) {
+    .projects { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1800px) {
+    .projects { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 3000px) {
+    .projects { grid-template-columns: repeat(4, 1fr); }
+}
+
+.textblock { /* the main text */
+    margin: 0 auto;
+    width: 80%;
+    padding: 1em;
+    border: 3px solid #0b002e;
+    border-radius: 10px;
+    font-size: 14pt;
+    line-height: 1.85em;
+    font-family: "HeaderFont";
+    background-color: rgba(6, 0, 15, 0.8);
+}
+
+.project_body { /* encapsulates the image and description for each project */
+    margin: 0 auto;
+    width: 90%;
+    padding: 1em;
+    border: 3px solid #0b002e;
+    border-radius: 10px;
+    font-size: 14pt;
+    line-height: 1.85em;
+    font-family: "HeaderFont";
+    background-color: rgba(6, 0, 15, 0.8);
+}
+
+.project_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1%;
+}
+
+.inline-icon {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1em;
+    gap: 20px;
+}
+
+.skills-list > li {
+    list-style-type: none;
+    text-align: center;
+    flex: 0 1 auto;
+}
