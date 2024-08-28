@@ -8,7 +8,6 @@
             content="width=device-width, initial-scale=1, user-scalable=no"
             keywords="Gage Howe, software developer, Texas A&M University, intern, computer science"
         />
-        <link rel="stylesheet" href="1.css" />
     </head>
 
     <body>
@@ -17,6 +16,8 @@
             <a href="qualifications.html">Qualifications</a>
             <a href="service.html">Service</a>
             <a href="ai.html">AI</a>
+            <link id="styleSheet" rel="stylesheet" type="text/css" href="1.css">
+            <button id="toggleStyle">Switch Style</button>
         </div>
         <h1>Projects</h1>
         <div class="projects">
@@ -97,3 +98,16 @@
                 </div>
             </div>
         </div>
+        <script>
+            const styleSheet = document.getElementById('styleSheet');
+            const toggleButton = document.getElementById('toggleStyle');
+            toggleButton.addEventListener('click', function() {
+                if (styleSheet.getAttribute('href') == '1.css') {
+                    styleSheet.setAttribute('href', '2.css');
+                } else {
+                    styleSheet.setAttribute('href', '1.css');
+                }
+            });
+        </script>
+    </body>
+</html>

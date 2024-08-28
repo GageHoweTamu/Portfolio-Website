@@ -5,34 +5,40 @@
     <head>
         <title>Hi!</title>
         <meta charset="utf-8" />
-        <link rel="icon" href="images/hyper.gif" type="image/x-icon" />
+        <!-- <link rel="icon" href="images/hyper.gif" type="image/x-icon" /> -->
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, user-scalable=no"
             keywords="Gage Howe, software developer, Texas A&M University, intern, computer science"
         />
-        <link rel="stylesheet" href="1.css" />
+        <link id="styleSheet" rel="stylesheet" type="text/css" href="1.css">
     </head>
-
     <body>
         <div class="navbar">
             <a href="portfolio.html">Portfolio</a>
             <a href="qualifications.html">Qualifications</a>
             <a href="service.html">Service</a>
             <a href="ai.html">AI</a>
+            <link id="styleSheet" rel="stylesheet" type="text/css" href="style1.css">
+            <button id="toggleStyle">Switch Style</button>
         </div>
         <div class="main">
             <h1>Gage Howe</h1>
-            <h2>Rust Evangelism Strike Force <img src="images/rust-white.png" alt="coffee" class="inline-icon"> </h2>
+            <h2>Rust Evangelism Strike Force <img src="images/rust-white.png" class="inline-icon"> </h2>
             <div class="textblock">
                 <p>I'm Gage, a software developer and student at Texas A&M University. I'm firmly convinced that Rust is the future of systems programming and many more fields. I'm currently seeking internships, especially those involving databases, backend engineering, and embedded systems for summer 2025.</p>
             </div>
-            <div class="skills-list">
-                <li>Rust</li><li>Python</li><li>C++</li><il>SQL</il>
-                <li>HTML</li><li>CSS</li><li>JavaScript</li>
-                <li>Java</li><li>Ruby</li><li>OCaml</li>
-                <li>Racket</li>
-            </div>
+            <script>
+                const styleSheet = document.getElementById('styleSheet');
+                const toggleButton = document.getElementById('toggleStyle');
+                toggleButton.addEventListener('click', function() {
+                    if (styleSheet.getAttribute('href') == '1.css') {
+                        styleSheet.setAttribute('href', '2.css');
+                    } else {
+                        styleSheet.setAttribute('href', '1.css');
+                    }
+                });
+            </script>
         </div>
     </body>
 </html>
