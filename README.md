@@ -1,3 +1,2 @@
 # Personal Porfolio Website
-GageHowe.com
-::<> 
+GageHowe.dev
