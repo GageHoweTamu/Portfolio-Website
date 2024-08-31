@@ -1,7 +1,7 @@
 {
-    "cleanUrls": true,
-    "trailingSlash": false,
-    "rewrites": [
-      { "source": "/:path", "destination": "/:path.html" }
-    ]
-  }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/:path", "destination": "/:path.html" }
+  ]
+}
