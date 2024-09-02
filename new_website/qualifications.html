@@ -8,7 +8,6 @@
             content="width=device-width, initial-scale=1, user-scalable=no"
             keywords="Gage Howe, software developer, Texas A&M University, intern, computer science"
         />
-        <link rel="stylesheet" href="1.css" />
     </head>
     <body>
         <div class="navbar">
@@ -32,3 +31,25 @@
             </div>
         </div>
         <object class="pdf" data="Howe, Gage.pdf" width=100% height=100%></object>
+        <script>
+            const styleSheet = document.getElementById('styleSheet');
+            const toggleButton = document.getElementById('toggleStyle');
+
+            function setStyle(styleName) {
+                styleSheet.setAttribute('href', styleName + '.css');
+                localStorage.setItem('currentStyle', styleName);
+            }
+
+            function toggleStyle() {
+                const currentStyle = styleSheet.getAttribute('href').replace('.css', '');
+                const newStyle = currentStyle === '1' ? '2' : '1'; // hee hee
+                setStyle(newStyle);
+            }
+
+            const storedStyle = localStorage.getItem('currentStyle') || '1';
+            setStyle(storedStyle);
+
+            toggleButton.addEventListener('click', toggleStyle);
+        </script>
+    </body>
+</html>
