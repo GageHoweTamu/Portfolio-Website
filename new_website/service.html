@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Hi!</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="images/hyper.gif" type="image/x-icon" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+            keywords="Gage Howe, software developer, Texas A&M University, intern, computer science"
+        />
+        <link rel="stylesheet" href="1.css" />
+    </head>
+
+    <body>
+        <div class="navbar">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="qualifications.html">Qualifications</a>
+            <a href="service.html">Service</a>
+            <a href="ai.html">AI</a>
+            <link id="styleSheet" rel="stylesheet" type="text/css" href="style1.css">
+            <button id="toggleStyle">Switch Style</button>
+        </div>
+        <div class="main">
+            
+            <h1>Service</h1>
+            <div class="projects">
+                <div class="textblock">
+                    <h2>Eagle Project 2021</h2>
+                    <p>During the summer of 2021, I led a team of Boy Scouts and volunteers to create and deliver ~840 woven fabric masks to a local poverty center.</p>
+                </div>
+                <div class="textblock">
+                    <h2>Service Interests</h2>
+                    <p>I'm interested in creating free resources for programming education and enabling learners to learn CS theory without </p>
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            // Get references to the stylesheet and toggle button
+            const styleSheet = document.getElementById('styleSheet');
+            const toggleButton = document.getElementById('toggleStyle');
+
+            function setStyle(styleName) {
+                styleSheet.setAttribute('href', styleName + '.css');
+                localStorage.setItem('currentStyle', styleName);
+            }
+
+            function toggleStyle() {
+                const currentStyle = styleSheet.getAttribute('href').replace('.css', '');
+                const newStyle = currentStyle === '1' ? '2' : '1'; // hee hee
+                setStyle(newStyle);
+            }
+
+            const storedStyle = localStorage.getItem('currentStyle') || '1';
+            setStyle(storedStyle);
+
+            toggleButton.addEventListener('click', toggleStyle);
+        </script>
+    </body>
+</html>

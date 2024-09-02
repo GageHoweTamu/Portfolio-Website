@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Hi!</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="images/hyper.gif" type="image/x-icon" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+            keywords="Gage Howe, software developer, Texas A&M University, intern, computer science"
+        />
+    </head>
+
+    <body>
+        <div class="navbar">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="qualifications.html">Qualifications</a>
+            <a href="service.html">Service</a>
+            <a href="ai.html">AI</a>
+            <link id="styleSheet" rel="stylesheet" type="text/css" href="1.css">
+            <button id="toggleStyle">Switch Style</button>
+        </div>
+        <h1>Projects</h1>
+        <div class="projects">
+            <div class="project">
+                <h2>Life3D</h2>
+                <div class="project_body">
+                    <img src="images/life3d.gif" alt="Life3D" class="project_image"/>
+                    <p>
+                        A cellular life and evolution simulator,
+                        inspired by cellular automata and The Life
+                        Engine. Each cell in an organism has specialized 
+                        functionality and contributes to the survival of the specimen. <span style="color: rgb(255, 0, 0);">[Rust]</span>
+                    </p>
+                    <p>
+                        <a href="https://github.com/GageHoweTamu/PWGen"><span style="color: rgb(0, 255, 0);">GitHub</span></a>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <h2>PWGen</h2>
+                <div class="project_body">
+                    <img src="images/pwgen.gif" alt="PWGen" class="project_image"/>
+                    <p>
+                        A cross-platform password generator and manager that never saves your passwords; they're deterministically generated when you need them. Uses SHA-256 hashing for maximum security. <span style="color: rgb(255, 0, 0);">[JavaScript]</span>
+                    </p>
+                    <p>  
+                        <a href="https://chromewebstore.google.com/detail/pwgen/gcoodcillpbmkmnkgbaannopodnfhljp"><span style="color: rgb(0, 0, 255);">Install</span></a> <a href="https://github.com/GageHoweTamu/PWGen"><span style="color: rgb(0, 255, 0);">GitHub</span></a>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <h2>Constellation.md</h2>
+                <div class="project_body">
+                    <img src="images/Constellationmd.gif" alt="Constellation" class="project_image"/>
+                    <p>
+                        A force-directed graph that visualizes references between MD files. Files that reference each other are attracted to each other. Uses Euler's method for physics simulation. <span style="color: rgb(255, 0, 0);">[Python]</span> 
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <h2>jeff</h2>
+                <div class="project_body">
+                    <img src="images/cli520.gif" alt="jeff" class="project_image"/>
+                    <p>
+                        An intelligent command-line utility that can aid
+                        the user by running complex commands or
+                        navigating the file system automonously. Uses Rust 
+                        bindings to the OpenAI api with custom system instructions. 
+                        For obvious reasons, don't run this as root. <span style="color: rgb(255, 0, 0);">[Rust]</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <h2>RetailDB</h2>
+                <div class="project_body">
+                    <img src="images/retaildb.gif" alt="RetailDB" class="project_image"/>
+                    <p>
+                        A CRUD and REST database application implemented with PostgreSQL,
+                        Python with Flask, React.js, and an AWS server. <span style="color: rgb(255, 0, 0);">[Python]</span> <span style="color: rgb(255, 0, 0);">[JavaScript] </span> <span style="color: rgb(255, 0, 0);">[SQL]</span>
+                    </p>                </div>
+            </div>
+            <div class="project">
+                <h2>ltop</h2>
+                <div class="project_body">
+                    <img src="images/ltop.gif" alt="ltop" class="project_image"/>
+                    <p>
+                        A minimal network utility for the terminal. Dynamically shows ping and total upload/download speeds. <span style="color: rgb(255, 0, 0);">[Rust]</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <h2>teeetris</h2>
+                <div class="project_body">
+                    <img src="images/tetris.gif" alt="tetris" class="project_image"/>
+                    <p>
+                        A spin on the classic game Tetris, with a larger playing area and special abilities. <span style="color: rgb(255, 0, 0);">[Ruby]</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const styleSheet = document.getElementById('styleSheet');
+            const toggleButton = document.getElementById('toggleStyle');
+
+            function setStyle(styleName) {
+                styleSheet.setAttribute('href', styleName + '.css');
+                localStorage.setItem('currentStyle', styleName);
+            }
+
+            function toggleStyle() {
+                const currentStyle = styleSheet.getAttribute('href').replace('.css', '');
+                const newStyle = currentStyle === '1' ? '2' : '1'; // hee hee
+                setStyle(newStyle);
+            }
+
+            const storedStyle = localStorage.getItem('currentStyle') || '1';
+            setStyle(storedStyle);
+
+            toggleButton.addEventListener('click', toggleStyle);
+        </script>
+    </body>
+</html>
