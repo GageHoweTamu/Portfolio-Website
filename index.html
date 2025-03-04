@@ -42,9 +42,18 @@
                     <li>Racket</li>
                 </ul>
         </div>
+
+                <!-- Type switcher-->
+        <div class="project-tabs">
+            <button class="tab-btn active" data-category="all">All</button>
+            <button class="tab-btn" data-category="personal">Personal</button>
+            <button class="tab-btn" data-category="hackathons">Hackathon</button>
+            <button class="tab-btn" data-category="school">School</button>
+        </div>
+
         <h1>Projects</h1>
         <div class="projects">
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>NodeBroker</h2>
                 <div class="project_body">
                     <img loading="lazy" src="" alt="" class="project_image">
@@ -57,7 +66,7 @@
                     <a href="https://github.com/GageHoweTamu/NodeBroker"><span style="color: rgb(0, 255, 0);">GitHub</span></a>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>HeadHuntr</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/headhuntr.png" alt="" class="project_image">
@@ -68,7 +77,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>ThreadWraith</h2>
                 <div class="project_body">
                     <img loading="lazy" src="" alt="" class="project_image">
@@ -79,7 +88,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="hackathons">
                 <h2>FrontierMap</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/frontiermap.gif" alt="FrontierMap" class="project_image">
@@ -92,7 +101,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="hackathons">
                 <h2>Learnix</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/learnix.gif" alt="Learnix" class="project_image">
@@ -106,7 +115,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>Galaxy Simulator</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/galaxies.gif" alt="galaxy simulator" class="project_image">
@@ -124,7 +133,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>FroodSort</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/sorting.png" alt="sorting algorithm output demonstrating performance benefits" class="project_image">
@@ -140,7 +149,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>Life3D</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/life3d.gif" alt="A visualization of the simulator" class="project_image">
@@ -156,7 +165,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>PWGen</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/pwgen.gif" alt="A usage demonstration of the browser extension" class="project_image">
@@ -168,7 +177,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>JavaScript Game of Life</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/game.gif" alt="Game Of Life" class="project_image">
@@ -180,7 +189,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>Constellation.md</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/Constellationmd.gif" alt="Constellation" class="project_image">
@@ -192,7 +201,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>jeff</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/cli520.gif" alt="jeff" class="project_image">
@@ -208,7 +217,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="school">
                 <h2>RetailDB</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/retaildb.gif" alt="RetailDB" class="project_image">
@@ -218,7 +227,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>ltop</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/ltop.gif" alt="ltop" class="project_image">
@@ -230,7 +239,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="school">
                 <h2>teeetris</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/tetris.gif" alt="tetris" class="project_image">
@@ -239,7 +248,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project">
+            <div class="project", data-category="personal">
                 <h2>Hyper Lethal</h2>
                 <div class="project_body">
                     <img loading="lazy" src="images/hyper.gif" alt="Hyper Lethal" class="project_image">
@@ -258,5 +267,36 @@
         <div class="footer">
             <a href="game.html">Play the game</a>
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const tabButtons = document.querySelectorAll('.tab-btn');
+                const projects = document.querySelectorAll('.project');
+                
+                // Add click event to tab buttons
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove active class from all buttons
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        
+                        // Add active class to clicked button
+                        button.classList.add('active');
+                        
+                        // Get selected category
+                        const category = button.getAttribute('data-category');
+                        
+                        // Filter projects
+                        projects.forEach(project => {
+                            if (category === 'all' || project.getAttribute('data-category') === category) {
+                                project.classList.remove('hidden');
+                            } else {
+                                project.classList.add('hidden');
+                            }
+                        });
+                    });
+                });
+            });
+            </script>
+
     </body>
 </html>
